@@ -7,7 +7,7 @@ yvytu
 ####Objetivo general
 Desarrollar un kit **Hágalo Usted Mismo** de una central meteorológica utilizando materiales disponibles en ferreterías, usando la plataforma **Arduino** para el prototipado de hardware y el software de control de sensores, y proveer de una plataforma web de visualización con herramientas para docentes.
 
-####Objetivos específicos (Sin orden específico)
+####Objetivos específicos (En ningún orden)
 1. Medir la velocidad del viento, la dirección del viento, la temperatura ambiente, la humedad relativa, la lluvia, la calidad del aire (NO2, CO2).
 2. Seleccionar los sensores que tengan menor costo y facilidad de instalación.
 3. Utilizar tarjetas perforadas para montaje de las placas de los sensores
