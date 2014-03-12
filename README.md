@@ -24,3 +24,12 @@ Desarrollar un kit **Hágalo Usted Mismo** de una central meteorológica utiliza
 4. Luz (fotocelula): SEN-09088 [datasheet](http://qed.princeton.edu/images/6/60/Photoresistor_SEN-09088-datasheet.pdf)
 5. NO2: MICS-2710 [datasheet](http://www.cdiweb.com/datasheets/e2v/mics-2710.pdf)
 6. CO2: MICS-5134 [datasheet](http://cfile204.uf.daum.net/attach/0207074B50EBD7042D607A)
+7. Arduino UNO [arduino.cc](http://arduino.cc/en/Main/ArduinoBoardUno)
+8. Varillas roscadas, arandelas, tuercas y rulemantes.
+9. Aros de madera y latas.
+10. Caños de plástico.
+
+####Partes de la central
+1. Placas de montaje de sensores: Temperatura, Humedad, NO2, CO2, Ruido, Luz. Temperatura, Humedad, NO2 y CO2 van dentro de una "pagoda" [ver ejemplo] (http://vwlowen.co.uk/picaxe/stevenson-screen/stevenson-screen-page2.htm).
+2. El anemómetro: Se monta un eje dentro de una lata, utilizando un ruleman y con un reed switch se mide el tiempo entre activaciones del switch, con una circunferencia se calcula la distancia y con la fórmula v = d/t se calcula la velocidad.
+3. La dirección del viento: se hace girar un disco codificado y se miden las posiciones con 4 sensores de luz y 4 leds [ver](http://ginad.org.uk/weathergd/images/00-vane-angles-optical-11-02-07-sml.png)
