@@ -1,5 +1,6 @@
 \documentclass[11pt, spanish]{report}
 \usepackage[spanish]{babel}
+\usepackage{graphicx}
 \selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
 % Title Page
@@ -26,7 +27,7 @@ El trabajo de compone de 3 elementos:
 \begin{enumerate}
 \item Central propiamente dicha:
 \begin{itemize}
-\item Mediciones: Velocidad del viento, dirección del viento, temperatura, humedad relativa ambiente, cantidad de lluvia y calidad del aire (NO2, CO2).
+\item Mediciones: Velocidad del viento, dirección del viento, temperatura, humedad relativa ambiente, cantidad de lluvia y calidad del aire (NO2 - Dióxido de Nitrógeno y CO2 ' Anhidrido carbónico).
 \item Control: Arduino UNO o NANODE utilizando los puertos analógicos y digitales para la captura.
 \item Conexiones: Conectores RJ11 de 4 hilos (V+, GND, DATA, AUX).
 \item Montaje: Componentes soldados sobre tarjetas perforadas.
@@ -51,14 +52,22 @@ El trabajo de compone de 3 elementos:
 \item Visualización de datos capturados
 \item Descarga en archivos y API de acceso a datos.
 \item Material educativo de referencia para la utilización de los datos en el aula.
+\item Software: Framework Laravel 4, Postgres, Postgis, AngularJS, ZURB Foundation. Publicado en yvytu.net
 \end{itemize}
 \end{enumerate}
 
-\section{Entregables}
+\section{Alcance}
+Inicia con la Investigación sobre como funciona una central meteorológica y la sistematización de datos de Open Data. 
+Como productos entregables
 \begin{enumerate}
 \item Una central montada y en funcionamiento en el predio de un colegio en la ciudad de Lambaré
 \item Aplicación WEB publicada en Internet.
 \item Copia del manual publicada.
 \end{enumerate}
+
+\section{Esquema Gráfico}
+\includegraphics[width=0.9\textwidth,natwidth=648,natheight=421]{Central.png}
+
+
 
 \end{document}          
