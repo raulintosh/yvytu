@@ -1,4 +1,4 @@
-\documentclass[11pt, spanish]{report}
+\documentclass[a4paper,11pt, spanish]{article}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 \selectlanguage{spanish}
@@ -9,26 +9,34 @@
 
 
 \begin{document}
-\maketitle
 
-\begin{abstract}
+\section{Integrantes}
+Raúl Ricardo Giucich González
+CO2383 - CI.:1147658
 
-Este trabajo tiene como objetivo construir una central meteorológica con elementos que en su gran mayoría se pueden conseguir en ferreterías y negocios de electrónica locales. Los sensores, MODEM y el PIC que los controla son los únicos elementos importados. Todo el software producido y utilizado durante este trabajo será Open Source.
+\section{Título del trabajo}
+Central Meteorológica con fines educativos
 
-El público objetivo de este producto es la educación escolar básica, tanto docentes como alumos a partir de los 12 años, y permitirá introdudir en la escuela la electrónica y la informática desde un enfoque de producción y no de consumo. El uso permitirá complementar las materias de matemática, medio natural, ciencias de la salud y el método científico. La construcción permitirá desarrollar el trabajo en equipo y habilidades relacionadas al trabajo técnico como la presición, la medición y el diagnóstico.
+\section{Tutor}
+Profesor Licenciado Hugo Javier Díaz Lavigne
 
-La central construida tendrá conexión a Internet y podrá enviar los datos a un sitio de soporte que contendrá la geolocalización de las centrales, y materiales educativos relacionados al clima y tratamiento de los datos.
+\section{Fecha}
+14 de Abril de 2014
 
+\section{Justificación del trabajo}
+El objetivo de esta Tesis es construir una central meteorológica con elementos que en su gran mayoría se pueden conseguir en ferreterías y negocios de electrónica locales. Los sensores, MODEM y el PIC que los controla son los únicos elementos importados. Todo el software y hardware producido y utilizado durante este trabajo será Open Source y Open Hardware respectivamente, convirtiéndose en un nodo más de "Internet of Things"
 
-\end{abstract}
+La audiencia de este producto es la educación escolar básica (EEB), tanto docentes como alumos a partir de los 12 años, y será un medio para introdudir en la escuela la electrónica y la informática desde un enfoque de producción y no de consumo. El uso de estos productos complementarán las materias de matemática, medio natural, ciencias de la salud y estimularán el uso del método científico. La construcción estimulará el trabajo en equipo y habilidades relacionadas al trabajo técnico como la presición, la medición y el diagnóstico.
 
-\section{Descripción}
-El trabajo de compone de 3 elementos:
+La Central tendrá conexión a Internet y podrá enviar los datos a una aplicación web de soporte que contendrá la geolocalización de las centrales, materiales educativos relacionados al clima, visualización y acceso a datos.
+
+\section{Descripción del trabajo}
+El trabajo se compone de 3 elementos:
 \begin{enumerate}
 \item Central propiamente dicha:
 \begin{itemize}
-\item Mediciones: Velocidad del viento, dirección del viento, temperatura, humedad relativa ambiente, cantidad de lluvia y calidad del aire (NO2 - Dióxido de Nitrógeno y CO2 ' Anhidrido carbónico).
-\item Control: Arduino UNO o NANODE utilizando los puertos analógicos y digitales para la captura.
+\item Mediciones: Velocidad del viento, dirección del viento, temperatura, humedad relativa ambiente, cantidad de lluvia y calidad del aire (NO2 - Dióxido de Nitrógeno y CO2 - Anhidrido carbónico).
+\item Control: Arduino UNO utilizando los puertos analógicos y digitales para la captura.
 \item Conexiones: Conectores RJ11 de 4 hilos (V+, GND, DATA, AUX).
 \item Montaje: Componentes soldados sobre tarjetas perforadas.
 \item Fuente: Fuente de corriente 9v, 650mA.
@@ -37,7 +45,7 @@ El trabajo de compone de 3 elementos:
 \item Software: utilizando Arduino Programming Language y SDK Arduino.
 \item Normalización de datos: Utilizar open data con nivel de 4 estrellas de las 5 de 5stardata.info
 \end{itemize}
-\item Manual de como construir la central y conectarla a Internet.
+\item Manual de construcción de la Central y conectividad a Internet.
 \begin{itemize}
 \item Lista de compra de materiales y herramientas a utilizar.
 \item Esquemáticos de los circuitos.
@@ -57,10 +65,10 @@ El trabajo de compone de 3 elementos:
 \end{enumerate}
 
 \section{Alcance}
-Inicia con la Investigación sobre como funciona una central meteorológica y la sistematización de datos de Open Data. 
+Inicia con la Investigación sobre como funciona una central meteorológica, la disponibilidad de sensores, la captura de datos meteorológicos, el aprendizaje experiencial en el aula (el uso de datos ambientales y la enseñanza de electrónica e informática) y la normalización de datos para Open Data.
 Como productos entregables
 \begin{enumerate}
-\item Una central montada y en funcionamiento en el predio de un colegio en la ciudad de Lambaré
+\item Una central montada y en funcionamiento en el predio de un colegio en la ciudad de Lambaré o en la Universidad.
 \item Aplicación WEB publicada en Internet.
 \item Copia del manual publicada.
 \end{enumerate}
@@ -68,6 +76,15 @@ Como productos entregables
 \section{Esquema Gráfico}
 \includegraphics[width=0.9\textwidth,natwidth=648,natheight=421]{Central.png}
 
+\section{Recursos Metodológicos}
+Se realizará una investigación de carácter documental sobre los elementos descriptos en el alcance, para el desarrollo del software de la central se utilizará una arquitectura basada en interrupciones debido a la cantidad de sensores que proveen datos de entrada concurrentemente.
 
+Para la Aplicación WEB se utilizará Orientación a Objetos y para la organización del Proyecto se utilizará SCRUM, proponiendo que el Tutor sea el SCRUM Master con quién discutir las dificultades y acordar las funcionalidades a implementar en cada Sprint.  
 
+\section{Cronograma de tareas}
+\begin{enumerate}
+\item Inicio: 28/04, Duración: 5D, Actividad: Investigación sobre la Historia, características y componentes de una central meteorológica y sensores sobre la calidad del aire, Recursos: Internet, Biblioteca UCA, PreRequisitos: Ninguno
+\item Inicio: 05/05, Duración: 1D, Actividad: Relevamiento de sensores, hojas técnicas de los mismos, costos y diagramas de montaje de los componentes de la central, Recursos: Internet, Biblioteca UCA, PreRequisitos: Tarea 1.
+\item Inicio: 06/05, Duración: 4D, Actividad: Diseño de placas de sensores incluyendo esquemático
+\end{enumerate}
 \end{document}          
