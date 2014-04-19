@@ -1,6 +1,8 @@
 \documentclass[a4paper,11pt, spanish]{article}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{gantt}
 \selectlanguage{spanish}
 \usepackage[utf8]{inputenc}
 % Title Page
@@ -24,8 +26,6 @@ Profesor Licenciado Hugo Javier Díaz Lavigne
 14 de Abril de 2014
 
 \section{Justificación del trabajo}
-El objetivo de esta Tesis es construir una central meteorológica con elementos que en su gran mayoría se pueden conseguir en ferreterías y negocios de electrónica locales. Los sensores, MODEM y el PIC que los controla son los únicos elementos importados. Todo el software y hardware producido y utilizado durante este trabajo será Open Source y Open Hardware respectivamente, convirtiéndose en un nodo más de "Internet of Things"
-
 La audiencia de este producto es la educación escolar básica (EEB), tanto docentes como alumos a partir de los 12 años, y será un medio para introdudir en la escuela la electrónica y la informática desde un enfoque de producción y no de consumo. El uso de estos productos complementarán las materias de matemática, medio natural, ciencias de la salud y estimularán el uso del método científico. La construcción estimulará el trabajo en equipo y habilidades relacionadas al trabajo técnico como la presición, la medición y el diagnóstico.
 
 La Central tendrá conexión a Internet y podrá enviar los datos a una aplicación web de soporte que contendrá la geolocalización de las centrales, materiales educativos relacionados al clima, visualización y acceso a datos.
@@ -82,22 +82,41 @@ Se realizará una investigación de carácter documental sobre los elementos des
 Para la Aplicación WEB se utilizará Orientación a Objetos y para la organización del Proyecto se utilizará SCRUM, proponiendo que el Tutor sea el SCRUM Master con quién discutir las dificultades y acordar las funcionalidades a implementar en cada Sprint.  
 
 \section{Cronograma de tareas}
+\begin{gantt}{1}{7}
+\begin{ganttitle}
+  \titleelement{Apr}{1}
+  \titleelement{May}{1}
+  \titleelement{Jun}{1}
+  \titleelement{Jul}{1}
+  \titleelement{Aug}{1}
+  \titleelement{Sep}{1}
+  \titleelement{Oct}{1}
+\end{ganttitle}
+\ganttbar{Investigación sobre la Historia, características y componentes de una central meteorológica y sensores sobre la calidad del aire}{0}{1}
+\end{gantt}
 \begin{enumerate}
 \item \textbf{Inicio}: 28/04, \textbf{Duración}: 5D, \textbf{Actividad}: Investigación sobre la Historia, características y componentes de una central meteorológica y sensores sobre la calidad del aire, \textbf{Recursos}: Internet, Biblioteca UCA, \textbf{PreRequisitos}: Ninguno
-\item \textbf{Inicio}: 05/05, \textbf{Duración}: 1D, \textbf{Actividad}: Relevamiento de sensores, hojas técnicas de los mismos, costos y diagramas de montaje de los componentes de la central, \textbf{Recursos}: Internet, Biblioteca UCA, \textbf{PreRequisitos}: Tarea 1.
+\item \textbf{Inicio}: 05/05, \textbf{Duración}: 1D, \textbf{Actividad}: Relevamiento de sensores, hojas técnicas de los mismos, costos y diagramas de montaje de los componentes de la central, documentación en la tesis, \textbf{Recursos}: Internet, Biblioteca UCA, \textbf{PreRequisitos}: Tarea 1.
 \item \textbf{Inicio}: 06/05, \textbf{Duración}: 13D, \textbf{Actividad}: Diseño de placas de sensores incluyendo la lista de materiales, esquemáticos, diagramas de soldadura para tarjeta perforada y método de testeo, \textbf{Recursos}: KICAD, InkScape, \textbf{PreRequisitos}: Tarea 2
 \item \textbf{Inicio}: 19/05, \textbf{Duración}: 4D, \textbf{Actividad}: Montaje de las placas para los sensores, \textbf{Recursos}: diagramas de soldadura, componentes, soldador, estaño, multímetro digital, \textbf{PreRequisitos}: Tarea 3
-\item \textbf{Inicio}: 24/05, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño del anemómetro, incluyendo placa, partes mecánicas y contenedor, \textbf{Recursos}: KICAD, QCAD, InkScape, \textbf{PreRequisitos}: Tarea 2
-\item \textbf{Inicio}: 02/06, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño de la Veleta, incluyendo placa, partes mecánicas y contenedor, \textbf{Recursos}: KICAD, QCAD, InkScape, \textbf{PreRequisitos}: Tarea 2
-\item \textbf{Inicio}: 09/06, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño del Pluviómetro: placa, partes mecánicas y contenedor, \textbf{Recursos}: KICAD, QCAD, InkScape, \textbf{PreRequisitos}: Tarea 2
+\item \textbf{Inicio}: 24/05, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño del anemómetro, incluyendo placa, partes mecánicas y contenedor, \textbf{Recursos}: KICAD, DraftSight, InkScape, \textbf{PreRequisitos}: Tarea 2
+\item \textbf{Inicio}: 02/06, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño de la Veleta, incluyendo placa, partes mecánicas y contenedor, \textbf{Recursos}: KICAD, DraftSight, InkScape, \textbf{PreRequisitos}: Tarea 2
+\item \textbf{Inicio}: 09/06, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño del Pluviómetro: placa, partes mecánicas y contenedor, \textbf{Recursos}: KICAD, DraftSight, InkScape, \textbf{PreRequisitos}: Tarea 2
 \item \textbf{Inicio}: 16/06, \textbf{Duración}: 7D, \textbf{Actividad}: Montaje del anemómetro, \textbf{Recursos}: Determinados en la tarea 5, \textbf{PreRequisitos}: Tarea 5
 \item \textbf{Inicio}: 23/06, \textbf{Duración}: 7D, \textbf{Actividad}: Montaje de la veleta, \textbf{Recursos}: Determinados en la tarea 6, \textbf{PreRequisitos}: Tarea 6
 \item \textbf{Inicio}: 30/06, \textbf{Duración}: 7D, \textbf{Actividad}: Montaje del pluviómetro, \textbf{Recursos}: Determinados en la tarea 7, \textbf{PreRequisitos}: Tarea 7
-\item \textbf{Inicio}: 07/07, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño y Montaje del Concentrador, \textbf{Recursos}: KICAD, QCAD, InkScape, componentes, \textbf{PreRequisitos}: Ninguno 
-\item \textbf{Inicio}: 14/07, \textbf{Duración}: 15D, \textbf{Actividad}: Programación de la central para capturar las señales de los sensores y transformación a los valores climáticos, \textbf{Recursos}: Datasheets de los sensores, Placa Arduino UNO Ethernet, Entorno de desarrollo Arduino, \textbf{Prerequisitos}: Tareas 4,8,9,10
+\item \textbf{Inicio}: 07/07, \textbf{Duración}: 7D, \textbf{Actividad}: Diseño y Montaje del Concentrador, \textbf{Recursos}: KICAD, DraftSight, InkScape, componentes, \textbf{PreRequisitos}: Ninguno 
+\item \textbf{Inicio}: 14/07, \textbf{Duración}: 15D, \textbf{Actividad}: Programación de la central para capturar las señales de los sensores y transformación a los valores climáticos, documentación en la tesis, \textbf{Recursos}: Datasheets de los sensores, Placa Arduino UNO Ethernet, Entorno de desarrollo Arduino, \textbf{Prerequisitos}: Tareas 4,8,9,10
 \item \textbf{Inicio}: 28/07, \textbf{Duración}: 15D, \textbf{Actividad}: Diseño y montaje del módulo de telecomunicaciones (Ethernet, SMS), \textbf{Recursos}: Placa Arduino UNO Ethernet, Modem SGM/GPRS con interfase serial, \textbf{PreRequisitos}: Tarea 12
-\item \textbf{Inicio}: 12/08, \textbf{Duración}: 5D, \textbf{Actividad}: Diseño y construcción de la "Pagoda" para la ubicación de los sensores, \textbf{Recursos}: QCAD, listones de Madera, Rejillas de ventilación, \textbf{PreRequisitos}: Ninguno
+\item \textbf{Inicio}: 12/08, \textbf{Duración}: 5D, \textbf{Actividad}: Diseño y construcción de la "Pagoda" para la ubicación de los sensores, \textbf{Recursos}: DraftSight, listones de Madera, Rejillas de ventilación, \textbf{PreRequisitos}: Ninguno
 \item \textbf{Inicio}: 17/08, \textbf{Duración}: 5D, \textbf{Actividad}: Calibración de los sensores y demás componentes de la central, \textbf{Recursos}: Central configurada, caños de PVC para la estructura, pagoda para sensores.
-
+\item \textbf{Inicio}: 18/08, \textbf{Duración}: 15D, \textbf{Actividad}: Redacción del capítulo de montaje de la Central dentro del manual, \textbf{Recursos}: Herramientas de Edición, \textbf{PreRequisitos}: Tarea 14
+\item \textbf{Inicio}: 18/08, \textbf{Actividad}: revisión diaria de datos recolectados, \textbf{Prerequisitos}: Tarea 16
+\item \textbf{Inicio}: 01/09, \textbf{Duración}: 15D, \textbf{Actividad}: Casos de uso para el registro de usuario, autenticación, registro de una central en la APP Web, documentación en la tesis, \textbf{Recursos}: ArgoUML, Laravel, AngularJS, Foundation, Postgres, PHPUnit, \textbf{PreRequisitos}: Ninguno
+\item \textbf{Inicio}: 15/09, \textbf{Duración}: 7D, \textbf{Actividad}: Casos de uso para visualización de la central en el mapa, API REST para la captura de datos de una central registrada, documentación en la tesis, \textbf{Recursos}: ArgoUML, Laravel, AngularJS, OpenStreetMaps, Postgres, Postgis, \textbf{PreRequisitos}: Tarea 18
+\item \textbf{Inicio}: 22/09, \textbf{Duración}: 7D, \textbf{Actividad}: Casos de uso para visualización de datos, API de acceso a datos, \textbf{Recursos}: ArgoUML, Laravel, Postgres, AngularJS.
+\item \textbf{Inicio}: 29/09, \textbf{Duración}: 15D, \textbf{Actividad}: Revisión y corrección del documento de la tesis
+\item \textbf{Inicio}: 13/10, \textbf{Duración}: 15D, \textbf{Actividad}: Revisión y corrección de la APP WEB.
+\item \textbf{Inicio}: 27/10, \textbf{Duración}: 15D, \textbf{Actividad}: Revisión y corrección del manual de montaje.
 \end{enumerate}
 \end{document}          
